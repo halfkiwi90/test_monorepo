@@ -3,13 +3,10 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
-		"next",
 		"turbo",
 		"prettier",
 	],
-	rules: {
-		"@next/next/no-html-link-for-pages": "off",
-	},
+	rules: {},
 	plugins: ["@typescript-eslint"],
 	parser: "@typescript-eslint/parser",
 	settings: {

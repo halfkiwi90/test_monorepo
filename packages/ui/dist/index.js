@@ -27,7 +27,7 @@ module.exports = __toCommonJS(src_exports);
 // src/Button.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
 var Button = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { children: "Boop2" });
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { children: "button changed retry" });
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

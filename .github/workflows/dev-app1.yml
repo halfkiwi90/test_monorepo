@@ -27,3 +27,6 @@ jobs:
  
         - name: Build
           run: yarn build
+          env:
+            REACT_APP_APP1: ${{ secrets.REACT_APP_APP1 }}
+            CI: ""
