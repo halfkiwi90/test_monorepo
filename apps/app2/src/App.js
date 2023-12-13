@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import { Button } from "ui";
+import something from "some";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
-					<code>src/App.js</code> and save to reload. app2 changed
+					<code>src/App.js</code> and save to reload.
 				</p>
 				<a
 					className="App-link"
@@ -19,6 +20,7 @@ function App() {
 					{process.env.REACT_APP_APP2}
 				</a>
 				<Button />
+				{something}
 			</header>
 		</div>
 	);

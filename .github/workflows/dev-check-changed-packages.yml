@@ -6,7 +6,7 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    
+
     outputs:
       # Defining a job output for used by the next jobs:
       app1_changed: ${{ steps.changedAction1.outputs.changed }}
@@ -32,11 +32,12 @@ jobs:
           workspace: app2
           from: HEAD^1 # Check for changes since previous commit (feel free to put a branch name instead)
 
-      - name: Validate Action2 Output
-        if: steps.changedAction2.outputs.changed == 'true' # Check output if it changed or not (returns a boolean)
-        run: echo 'app2 changed!'
- 
   call_dev-app1_workflow:
     needs: [check]
     if: needs.check.outputs.app1_changed == 'true' # Check output if it changed or not (returns a boolean)
     uses: ./.github/workflows/dev-app1.yml
+
+  call_dev-app2_workflow:
+    needs: [check]
+    if: needs.check.outputs.app2_changed == 'true' # Check output if it changed or not (returns a boolean)
+    uses: ./.github/workflows/dev-app2.yml
