@@ -20,7 +20,7 @@ jobs:
 
       - name: app1 changed in last commit?
         id: changedAction1
-        uses: halfkiwi90/action-turbo-changed
+        uses: halfkiwi90/action-turbo-changed@1.0.0
         with:
           workspace: app1
           from: HEAD^1 # Check for changes since previous commit (feel free to put a branch name instead)
